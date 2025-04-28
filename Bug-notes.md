@@ -3,9 +3,9 @@
 - Images not don't appears correctly (except logo)
 - Navigation link pages don't exist
   - /pages/cart and /pages/product-detail do exist, but don't appear to be linked to anywhere
-  - links are the bottom also lead nowhere
+  - links at the bottom also lead nowhere
 - Cart appears to function partially
-  - "Add to Cart" add items to the drop-down in the top right
+  - "Add to Cart" adds items to the drop-down in the top right
   - drop-down layout is mis-aligned
   - 'x' buttons remove items from the drop-down
   - total is not calculated/NaN
@@ -14,8 +14,13 @@
 - Footer "Follow us" links are misaligned
 - Layout is entirely non-responsive, breaks on small screen size
 
-## First commit - "Product and Category images"
+## Commit 1 - "Product and Category images" - 04/24/25
 
 - Found images for each of the featured products and categories
   - Note: none of the images are mine, and are for demonstration only
 - Added correct `src` to product 4 card in /index.html
+
+## Commit 2 - "Dummy pages" - 04/28/25
+
+- Reduced image file sizes
+- Created dummy pages for all links on the home page
