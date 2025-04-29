@@ -23,4 +23,13 @@
 ## Commit 2 - "Dummy pages" - 04/28/25
 
 - Reduced image file sizes
+- Added responsive tag to /index.html
 - Created dummy pages for all links on the home page
+
+## Commit 3 - "Initial migration to NextJS" - 04/29/25
+
+- Installed and configured NextJS
+- Migrated desktop view from original to NextJS
+  - created supporting UI components
+  - translated base styling to Tailwind CSS
+  - created directories and dummy pages for all links
