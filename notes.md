@@ -33,3 +33,11 @@
   - created supporting UI components
   - translated base styling to Tailwind CSS
   - created directories and dummy pages for all links
+
+## Commit 4 - "Add to Cart functionality" - 04/30/25
+
+- Basic shopping cart framework
+  - Products can be added to cart and are dynamically displayed in the dropdown
+  - Remove function still needs to be implemented
+  - Cart dropdown needs to be styled
+  - Cart checkout button redirects to checkout page, which is still just a placeholder
