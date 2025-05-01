@@ -9,7 +9,7 @@ import AddToCartBtn from "./AddToCartBtn";
 export default function ProductCard({ product }: { product: Product }) {
   const cart = useContext(CartContext);
   return (
-    <div className="border border-gray-200 rounded-lg overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+    <div className="border border-gray-200 bg-white rounded-lg overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative h-[200px] overflow-hidden">
         <Image
           src={product.img}

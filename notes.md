@@ -49,3 +49,12 @@
 - Users can increase or decrease the amount of each item or remove items completely via controls
 - Users can dismiss the dropdown by clicking outside of it
 - Cart dropdown is full Reactive and contents persist across pages
+
+## Commit 6 - "Checkout Page" - 05/01/25
+
+- Implemented the Checkout page
+  - Data is collected from the cart dynamically
+  - No payment methods are implemented
+    - Payment method accordions are for demonstration
+    - "Complete Order" button clears the cart and redirects to the home page
+  - Shipping and sales tax are calculated with placeholder values

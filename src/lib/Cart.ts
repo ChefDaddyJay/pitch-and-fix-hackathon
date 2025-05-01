@@ -12,7 +12,6 @@ export class Cart {
     let total = 0;
     for (const entry of this.products) {
       total += entry.product.price * entry.amount;
-      console.log(total);
     }
     return total.toFixed(2);
   }
@@ -52,6 +51,11 @@ export class Cart {
     }
     return this.remove(product);
   }
+  clear() {
+    this.products = [];
+    this.save();
+    return new Cart();
+  }
   save() {
     const entries = [
       this.products.map((entry) => ({
@@ -68,7 +72,10 @@ export class Cart {
       const entries = JSON.parse(fromStorage || "[]");
       for (const entry of entries[0]) {
         try {
-          storedCart.add(await fetchProductById(entry.id));
+          while (entry.amount > 0) {
+            storedCart.add(await fetchProductById(entry.id));
+            entry.amount--;
+          }
         } catch (Error) {
           console.log(Error, "Invalid product ID in local storage.");
         }

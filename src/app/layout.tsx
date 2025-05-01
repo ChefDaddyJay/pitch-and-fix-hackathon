@@ -31,7 +31,7 @@ export default function RootLayout({
         <head>
           <title>ShopEase - Your One Stop Shop</title>
         </head>
-        <body>
+        <body className="bg-neutral-200">
           <Navbar />
           {children}
           <Footer>
