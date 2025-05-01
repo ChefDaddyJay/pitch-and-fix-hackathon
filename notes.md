@@ -41,3 +41,11 @@
   - Remove function still needs to be implemented
   - Cart dropdown needs to be styled
   - Cart checkout button redirects to checkout page, which is still just a placeholder
+
+## Commit 5 - "Cart dropdown styles and controls" - 04/30/25
+
+- Cart dropdown is styled, including amounts, prices, and controls for each product
+- Cart total is calculated and displayed at the bottom of the dropdown and as part of the icon
+- Users can increase or decrease the amount of each item or remove items completely via controls
+- Users can dismiss the dropdown by clicking outside of it
+- Cart dropdown is full Reactive and contents persist across pages

@@ -7,7 +7,7 @@ export default function Hero() {
           Find the best products at the best prices
         </p>
         <a
-          href="pages/products.html"
+          href="/products"
           className="inline-block py-3 px-6 bg-amber-500 text-white rounded font-bold text-xl transition duration-300 hover:bg-amber-600"
         >
           Shop Now

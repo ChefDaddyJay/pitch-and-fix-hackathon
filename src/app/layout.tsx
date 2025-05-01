@@ -15,6 +15,7 @@ export default function RootLayout({
 }>) {
   const [cart, setCart] = useState(new Cart());
   const updateCart = (newCart: Cart) => {
+    console.log("New Cart", newCart);
     setCart(newCart);
   };
   useEffect(() => {
@@ -23,7 +24,6 @@ export default function RootLayout({
         setCart(storedCart);
       }
     });
-    console.log(cart);
   }, []);
   return (
     <CartContext.Provider value={{ cart, updateCart }}>
