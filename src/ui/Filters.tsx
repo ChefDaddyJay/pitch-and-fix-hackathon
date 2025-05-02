@@ -109,7 +109,7 @@ export function FilterCheckbox({
 }) {
   return (
     <li
-      className="w-full hover:border-b border-neutral-300 transition-all duration-300 flex items-center justify-between"
+      className="w-full border-b border-white hover:border-neutral-300 transition-colors duration-1000 flex items-center justify-between"
       onClick={onChange}
     >
       <label htmlFor={option}>{option}</label>

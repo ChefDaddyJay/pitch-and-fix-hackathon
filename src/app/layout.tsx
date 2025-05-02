@@ -47,8 +47,8 @@ export default function RootLayout({
               links={[
                 { text: "All Products", href: "/products" },
                 { text: "Categories", href: "/categories" },
-                { text: "Deals", href: "/deals" },
-                { text: "New Arrivals", href: "/new-arrivals" },
+                { text: "Deals", href: "/products?tag=Sale" },
+                { text: "New Arrivals", href: "/products?tag=New" },
               ]}
             />
             <FooterColumn

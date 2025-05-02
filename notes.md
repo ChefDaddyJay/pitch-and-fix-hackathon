@@ -88,6 +88,14 @@
 - Created Contact Us Page
   - No actual contact function is implemented.
 
+## Commit 11 - "Footer links and FAQ Page" - 05/02/25
+
+- Updated footer links
+  - New Arrivals now leads to `/products?tag=New`
+  - Deals now leads to `/products?tag=Sale`
+- Implemented FAQ Page
+  - Questions and answers can be added to the `questions` array and are displayed in Accordions
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

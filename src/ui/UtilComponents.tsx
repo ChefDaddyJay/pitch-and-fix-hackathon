@@ -13,10 +13,21 @@ export function Accordion({
 }: {
   title: string;
   icon?: string | React.ReactNode;
-  isOpen: boolean;
-  handleChange: () => void;
+  isOpen?: boolean;
+  handleChange?: () => void;
   children: React.ReactNode;
 }) {
+  const [open, setOpen] = useState(isOpen || false);
+
+  const toggle = () => {
+    if (isOpen !== undefined && handleChange) {
+      handleChange();
+      setOpen(isOpen);
+    } else {
+      setOpen(!open);
+    }
+  };
+
   const Icon = () => {
     if (icon) {
       if (typeof icon === "string") {
@@ -34,8 +45,8 @@ export function Accordion({
     <div>
       <div
         className="flex items-center justify-between w-full h-[60px] p-4 font-semibold border border-neutral-300 hover:bg-neutral-100 transition-colors duration-300"
-        onClick={handleChange}
-        aria-expanded={isOpen}
+        onClick={toggle}
+        aria-expanded={open}
       >
         <div className="flex gap-2 items-center">
           <Icon />
@@ -43,13 +54,13 @@ export function Accordion({
         </div>
         <RxChevronUp
           className={`w-4 h-4 ml-2 transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
+            open ? "rotate-180" : ""
           }`}
         />
       </div>
       <div
         className={`overflow-hidden transition-max-height duration-300 delay-200 ease-out ${
-          isOpen ? "max-h-screen" : "max-h-0"
+          open ? "max-h-screen" : "max-h-0"
         }`}
       >
         <div className="p-4">{children}</div>
@@ -207,7 +218,7 @@ export function HorizontalDivider({ text }: { text?: string }) {
       {text ? (
         <>
           <div className="w-full h-[1px] bg-neutral-400">&nbsp;</div>
-          <div className="text-center text-neutral-500 font-bold flex-shrink px-4">
+          <div className="text-center text-neutral-500 font-bold flex-shrink px-4 min-w-max">
             {text}
           </div>
           <div className="w-full h-[1px] bg-neutral-400">&nbsp;</div>

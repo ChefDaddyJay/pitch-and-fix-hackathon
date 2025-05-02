@@ -43,7 +43,7 @@ export default async function ProductsPage(props: {
         <Filters filters={filters} />
       </div>
       <PageSection>
-        <div className="m-4 flex flex-wrap gap-4">
+        <div className="m-4 flex flex-wrap justify-center gap-4">
           {products.length > 0 ? (
             products.map((product) => (
               <ProductCard product={product as Product} key={product.id} />
