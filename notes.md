@@ -101,6 +101,12 @@
 - Implemented Blog Page
   - Posts are collected from a mock database call
 
+## Commit 13 - "Returns Page" - 05/02/25
+
+- Implemented Refunds & Returns Page
+  - Originally "Shipping & Returns" but shipping is handled on the checkout page and shipment tracking would be handled externally.
+  - Similar to Contact Us, no actual communication is implemented
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

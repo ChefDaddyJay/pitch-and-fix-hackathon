@@ -26,9 +26,8 @@ export default function ContactPage() {
             <SubmitButton text="Send Message" onClick={() => redirect("/")} />
           </div>
         </PageSection>
-        ;
       </div>
-      <div className="w-1/5 flex flex-col gap-4">
+      <div className="w-1/5 flex flex-col gap-4 h-max sticky top-4">
         <PageSection title="Call Us">
           <div className="w-4/5 mb-4">+1 (555) 123 - 4567</div>
         </PageSection>

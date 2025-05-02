@@ -56,7 +56,7 @@ export default function RootLayout({
               links={[
                 { text: "Contact Us", href: "/contact" },
                 { text: "FAQ", href: "/faq" },
-                { text: "Shipping & Returns", href: "/shipping" },
+                { text: "Refunds & Returns", href: "/returns" },
                 { text: "Terms & Conditions", href: "/terms" },
               ]}
             />

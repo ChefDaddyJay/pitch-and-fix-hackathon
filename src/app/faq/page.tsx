@@ -37,7 +37,11 @@ export default function FAQPage() {
         </PageSection>
         {questions.map((question, i) => (
           <PageSection key={`questison-${i}`}>
-            <Accordion title={question.question}>{question.answer}</Accordion>
+            <Accordion title={question.question}>
+              <div className="w-full flex justify-center">
+                <div className="w-9/10">{question.answer}</div>
+              </div>
+            </Accordion>
           </PageSection>
         ))}
       </div>
