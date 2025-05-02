@@ -9,7 +9,7 @@ export default function CardGrid({
   children: React.ReactNode;
 }>) {
   return (
-    <section className="py-16 px-8">
+    <section className="py-16 px-8 flex flex-col items-center justify-around">
       <h2 className="text-3xl text-center font-bold mb-8 leading-tight">
         {title}
       </h2>

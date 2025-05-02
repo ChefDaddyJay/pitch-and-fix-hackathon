@@ -7,7 +7,8 @@ import {
   AddressForm,
   Checkbox,
   FormField,
-  StatesOptions,
+  HorizontalDivider,
+  PageSection,
 } from "@/ui/UtilComponents";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { redirect } from "next/navigation";
@@ -39,16 +40,11 @@ export default function CheckoutPage() {
           </PayPalScriptProvider>
         </div>
       </div>
-      <div className="flex items-center justify-stretch w-4/5 my-4">
-        <div className="w-full h-[1px] bg-neutral-400">&nbsp;</div>
-        <div className="text-center text-neutral-500 font-bold flex-shrink px-4">
-          OR
-        </div>
-        <div className="w-full h-[1px] bg-neutral-400">&nbsp;</div>
-      </div>
+
+      <HorizontalDivider text="OR" />
 
       <div className="flex justify-evenly gap-4 w-4/5">
-        <CheckoutSection title="Review Order">
+        <PageSection title="Review Order">
           <div className="flex flex-col gap-2 w-4/5 border-b border-neutral-300 pb-4">
             {cart.products.map((entry) => {
               return (
@@ -75,19 +71,19 @@ export default function CheckoutPage() {
               package."
             name="gift"
           />
-        </CheckoutSection>
+        </PageSection>
 
-        <CheckoutSection title="Delivery Address">
+        <PageSection title="Delivery Address">
           <AddressForm />
-        </CheckoutSection>
+        </PageSection>
 
         <div className="w-full flex flex-col gap-4">
-          <CheckoutSection title="Payment Options">
+          <PageSection title="Payment Options">
             <PaymentMethods />
-          </CheckoutSection>
-          <CheckoutSection title="Order Summary">
+          </PageSection>
+          <PageSection title="Order Summary">
             <OrderSummary shipping={shipping} />
-          </CheckoutSection>
+          </PageSection>
           <CompleteOrder />
           <div className="text-sm text-neutral-400 text-center">
             <span className="pr-1">
@@ -114,28 +110,6 @@ export function CompleteOrder() {
       }}
     >
       Complete Order
-    </div>
-  );
-}
-
-export function CheckoutSection({
-  title,
-  children,
-}: {
-  title?: string;
-  children?: React.ReactNode;
-}) {
-  const { cart, updateCart } = useContext(CartContext);
-  return (
-    <div className="w-full h-max bg-white flex flex-col items-center gap-4">
-      {title ? (
-        <h3 className="w-4/5 border-b border-neutral-300 text-xl font-bold text-center p-2">
-          {title}
-        </h3>
-      ) : (
-        ""
-      )}
-      {children}
     </div>
   );
 }

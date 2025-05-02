@@ -58,3 +58,20 @@
     - Payment method accordions are for demonstration
     - "Complete Order" button clears the cart and redirects to the home page
   - Shipping and sales tax are calculated with placeholder values
+
+## Commit 7 - "Products Page" - 05/02/25
+
+- Added hero image and fixed styling
+- Fixed Navbar to reflect active page
+- Created SampleProducts.json to mimic database calls
+- Fixed product cards
+  - Cards are now more responsive
+  - Cards display stars for the rating, but just for show. The only rating data each product has is the number of ratings.
+- Implemented Products page
+  - Products are displayed in a grid on the right
+  - Search and filter controls are on the left
+  - Search and filters both use searchParams, so users can link baack to their search
+
+## Bug Notes
+
+[x] Product cards should display a rating, not just the number of ratings

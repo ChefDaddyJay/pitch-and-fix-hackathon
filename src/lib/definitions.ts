@@ -2,43 +2,41 @@ export type Product = {
   id: string;
   img: string;
   name: string;
+  category: string;
   tag?: string;
   price: number;
   origPrice?: number;
   rating: number;
 };
 
-// sample Products
-export const products: Product[] = [
-  {
-    id: "1",
-    img: "/images/product1.jpg",
-    name: "Wireless Headphones",
-    tag: "Sale",
-    price: 99.99,
-    origPrice: 120,
-    rating: 42,
-  },
-  {
-    id: "2",
-    img: "/images/product2.jpg",
-    name: "Smart Watch",
-    price: 199.99,
-    rating: 28,
-  },
-  {
-    id: "3",
-    img: "/images/product3.jpg",
-    name: "Bluetooth Speaker",
-    tag: "New",
-    price: 79.99,
-    rating: 17,
-  },
-  {
-    id: "4",
-    img: "/images/product4.jpg",
-    name: "Laptop Bag",
-    price: 49.99,
-    rating: 35,
-  },
+// Generate Sample Products - ran once to create SampleProjects.json
+function generateProducts(count = 4) {
+  const generated = [];
+  const names = [
+    "Wireless Headphones",
+    "Smart Watch",
+    "Bluetooth Speaker",
+    "Laptop Bag",
+  ];
+  for (let i = 0; i < count; i++) {
+    const rand = Math.ceil(Math.random() * 4);
+    generated.push({
+      id: (i + 1).toString(),
+      img: `/images/product${rand}.jpg`,
+      name: names[rand - 1],
+      tag: rand % 2 === 0 ? "Sale" : "New",
+      price: rand * 100 - 0.01,
+      origPrice: rand % 2 === 0 ? rand * 100 + 20 : null,
+      rating: rand * rand,
+    } as Product);
+  }
+  console.log(JSON.stringify(generated));
+  return generated;
+}
+
+export const categories = [
+  "Electronics",
+  "Clothing",
+  "Home & Kitchen",
+  "Sports & Outdoor",
 ];

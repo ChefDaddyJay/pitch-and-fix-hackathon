@@ -1,12 +1,21 @@
+"use client";
+
 import Image from "next/image";
 import CartDropdown from "./Cart";
+import { usePathname } from "next/navigation";
 
-export default function Navbar() {
+export default function Navbar({
+  links,
+}: {
+  links: { text: string; href: string }[];
+}) {
+  const path = usePathname();
+
   return (
     <header className="flex justify-between items-center px-8 py-4 bg-white shadow z-10">
       <div className="flex items-center">
         <Image
-          src="images/ShopEase-logo.svg"
+          src="/images/ShopEase-logo.svg"
           alt="ShopEase Logo"
           width={50}
           height={50}
@@ -15,31 +24,18 @@ export default function Navbar() {
       </div>
       <nav className="block">
         <ul className="flex flex-row list-none gap-6">
-          <li>
-            <a href="/" className="p-2 text-blue-600">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="/products" className="p-2 hover:text-blue-600">
-              Products
-            </a>
-          </li>
-          <li>
-            <a href="/categories" className="p-2 hover:text-blue-600">
-              Categories
-            </a>
-          </li>
-          <li>
-            <a href="/about" className="p-2 hover:text-blue-600">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="/contact" className="p-2 hover:text-blue-600">
-              Contact
-            </a>
-          </li>
+          {links.map((link, i) => (
+            <li key={`navlink-${i}`}>
+              <a
+                href={link.href}
+                className={`p-2 hover:text-blue-600 ${
+                  path === link.href ? "text-blue-600" : ""
+                }`}
+              >
+                {link.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
       <CartDropdown />

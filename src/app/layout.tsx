@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import Navbar from "@/ui/Navbar";
 import "./globals.css";
 import Footer from "@/ui/Footer";
@@ -15,7 +14,6 @@ export default function RootLayout({
 }>) {
   const [cart, setCart] = useState(new Cart());
   const updateCart = (newCart: Cart) => {
-    console.log("New Cart", newCart);
     setCart(newCart);
   };
   useEffect(() => {
@@ -25,6 +23,15 @@ export default function RootLayout({
       }
     });
   }, []);
+
+  const navlinks = [
+    { text: "Home", href: "/" },
+    { text: "Products", href: "/products" },
+    { text: "Categories", href: "/categories" },
+    { text: "About Us", href: "/about" },
+    { text: "Contact Us", href: "/contact" },
+  ];
+
   return (
     <CartContext.Provider value={{ cart, updateCart }}>
       <html lang="en">
@@ -32,7 +39,7 @@ export default function RootLayout({
           <title>ShopEase - Your One Stop Shop</title>
         </head>
         <body className="bg-neutral-200">
-          <Navbar />
+          <Navbar links={navlinks} />
           {children}
           <Footer>
             <FooterColumn

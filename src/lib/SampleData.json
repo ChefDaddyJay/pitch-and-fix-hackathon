@@ -1,0 +1,202 @@
+[
+    {
+      "id": "1",
+      "img": "/images/product1.jpg",
+      "name": "Laptop Bag",
+      "category": "Home & Kitchen",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "2",
+      "img": "/images/product3.jpg",
+      "name": "Laptop Bag",
+      "category": "Clothing",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "3",
+      "img": "/images/product3.jpg",
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "tag": "New",
+      "price": 99.99,
+      "origPrice": null,
+      "rating": 1
+    },
+    {
+      "id": "4",
+      "img": "/images/product4.jpg",
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "tag": "Sale",
+      "price": 199.99,
+      "origPrice": 220,
+      "rating": 4
+    },
+    {
+      "id": "5",
+      "img": "/images/product2.jpg",
+      "name": "Smart Watch",
+      "category": "Sports & Outdoor",
+      "tag": "Sale",
+      "price": 199.99,
+      "origPrice": 220,
+      "rating": 4
+    },
+    {
+      "id": "6",
+      "img": "/images/product2.jpg",
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "tag": "Sale",
+      "price": 199.99,
+      "origPrice": 220,
+      "rating": 4
+    },
+    {
+      "id": "7",
+      "img": "/images/product3.jpg",
+      "name": "Laptop Bag",
+      "category": "Clothing",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "8",
+      "img": "/images/product4.jpg",
+      "name": "Wireless Headphones",
+      "category": "Home & Kitchen",
+      "tag": "New",
+      "price": 99.99,
+      "origPrice": null,
+      "rating": 1
+    },
+    {
+      "id": "9",
+      "img": "/images/product2.jpg",
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "tag": "Sale",
+      "price": 199.99,
+      "origPrice": 220,
+      "rating": 4
+    },
+    {
+      "id": "10",
+      "img": "/images/product2.jpg",
+      "name": "Laptop Bag",
+      "category": "Clothing",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "11",
+      "img": "/images/product3.jpg",
+      "name": "Laptop Bag",
+      "category": "Home & Kitchen",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "12",
+      "img": "/images/product1.jpg",
+      "name": "Bluetooth Speaker",
+      "category": "Clothing",
+      "tag": "New",
+      "price": 299.99,
+      "origPrice": null,
+      "rating": 9
+    },
+    {
+      "id": "13",
+      "img": "/images/product1.jpg",
+      "name": "Laptop Bag",
+      "category": "Sports & Outdoor",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "14",
+      "img": "/images/product4.jpg",
+      "name": "Smart Watch",
+      "category": "Clothing",
+      "tag": "Sale",
+      "price": 199.99,
+      "origPrice": 220,
+      "rating": 4
+    },
+    {
+      "id": "15",
+      "img": "/images/product3.jpg",
+      "name": "Smart Watch",
+      "category": "Home & Kitchen",
+      "tag": "Sale",
+      "price": 199.99,
+      "origPrice": 220,
+      "rating": 4
+    },
+    {
+      "id": "16",
+      "img": "/images/product4.jpg",
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "tag": "New",
+      "price": 299.99,
+      "origPrice": null,
+      "rating": 9
+    },
+    {
+      "id": "17",
+      "img": "/images/product3.jpg",
+      "name": "Bluetooth Speaker",
+      "category": "Clothing",
+      "tag": "New",
+      "price": 299.99,
+      "origPrice": null,
+      "rating": 9
+    },
+    {
+      "id": "18",
+      "img": "/images/product2.jpg",
+      "name": "Laptop Bag",
+      "category": "Home & Kitchen",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    },
+    {
+      "id": "19",
+      "img": "/images/product4.jpg",
+      "name": "Wireless Headphones",
+      "category": "Sports & Outdoor",
+      "tag": "New",
+      "price": 99.99,
+      "origPrice": null,
+      "rating": 1
+    },
+    {
+      "id": "20",
+      "img": "/images/product4.jpg",
+      "name": "Laptop Bag",
+      "category": "Home & Kitchen",
+      "tag": "Sale",
+      "price": 399.99,
+      "origPrice": 420,
+      "rating": 16
+    }
+  ]
