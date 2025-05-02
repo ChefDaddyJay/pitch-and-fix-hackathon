@@ -112,6 +112,14 @@
 - Implemented the Terms & Conditions Page
   - Similar to FAQ Page, policies are displayed in Accordions
 
+## Commmit 15 - "Careers Page" - 05/02/25
+
+- Implemented Careers Page
+  - Hero image doesn't show up properly, but I think that's an issue with TurboPack that will likely disappear in a production environment
+  - Drag-and-drop option for uploading resume is handled with `react-dropzone`
+  - No actual upload/communication is implemented
+  - "Apply Now" redirects to homepage
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
