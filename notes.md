@@ -96,6 +96,11 @@
 - Implemented FAQ Page
   - Questions and answers can be added to the `questions` array and are displayed in Accordions
 
+## Commit 12 - "Blog Page" - 05/02/25
+
+- Implemented Blog Page
+  - Posts are collected from a mock database call
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
