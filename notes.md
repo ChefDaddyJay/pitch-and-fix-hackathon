@@ -83,6 +83,11 @@
 - Implemented About Us page
   - Just a simple design with lorem ipsum filler
 
+## Commit 10 - "Contact Us Page" - 05/02/25
+
+- Created Contact Us Page
+  - No actual contact function is implemented.
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

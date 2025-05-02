@@ -86,6 +86,23 @@ export function FormField({
   );
 }
 
+export function SubmitButton({
+  text,
+  onClick,
+}: {
+  text: string;
+  onClick: () => void;
+}) {
+  return (
+    <div
+      className="w-full h-max bg-amber-500 flex flex-col justify-center items-center p-4 text-3xl font-bold rounded shadow-xl hover:bg-amber-400 transition-colors duration-300 cursor-pointer"
+      onClick={onClick}
+    >
+      {text}
+    </div>
+  );
+}
+
 export function StatesOptions() {
   const states = [
     "Alabama",

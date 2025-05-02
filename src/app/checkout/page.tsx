@@ -9,6 +9,7 @@ import {
   FormField,
   HorizontalDivider,
   PageSection,
+  SubmitButton,
 } from "@/ui/UtilComponents";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import { redirect } from "next/navigation";
@@ -84,7 +85,13 @@ export default function CheckoutPage() {
           <PageSection title="Order Summary">
             <OrderSummary shipping={shipping} />
           </PageSection>
-          <CompleteOrder />
+          <SubmitButton
+            text="Complete Order"
+            onClick={() => {
+              updateCart(cart.clear());
+              redirect("/");
+            }}
+          />
           <div className="text-sm text-neutral-400 text-center">
             <span className="pr-1">
               * By signing up or placing an order you are consenting to our
@@ -95,21 +102,6 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-export function CompleteOrder() {
-  const { cart, updateCart } = useContext(CartContext);
-  return (
-    <div
-      className="w-full h-max bg-amber-500 flex flex-col justify-center items-center p-4 text-3xl font-bold rounded shadow-xl hover:bg-amber-400 transition-colors duration-300 cursor-pointer"
-      onClick={() => {
-        updateCart(cart.clear());
-        redirect("/");
-      }}
-    >
-      Complete Order
     </div>
   );
 }
