@@ -78,6 +78,11 @@
   - Products are displayed in sections that each scroll horizontally
   - Implemented `fetchProductsByCategory` in `/lib/data.ts`
 
+## Commit 9 - "About Us Page" - 05/02/25
+
+- Implemented About Us page
+  - Just a simple design with lorem ipsum filler
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
