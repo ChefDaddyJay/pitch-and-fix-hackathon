@@ -72,6 +72,13 @@
   - Search and filter controls are on the left
   - Search and filters both use searchParams, so users can link baack to their search
 
+## Commit 8 - "Categories Page" - 05/02/25
+
+- Implemented Categories page
+  - Products are displayed in sections that each scroll horizontally
+  - Implemented `fetchProductsByCategory` in `/lib/data.ts`
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
+[] Home page is displaying all the sample products. This needs to be limited to 4 or put in a carousel

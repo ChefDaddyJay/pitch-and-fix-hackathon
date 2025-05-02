@@ -15,6 +15,10 @@ export async function fetchProductById(id: string) {
   throw new Error(`Product id ${id} not found.`);
 }
 
+export async function fetchProductsByCategory(category: string) {
+  return SampleProducts.filter((product) => product.category === category);
+}
+
 export async function fetchFilteredProducts(
   query: string,
   tags: string[],
