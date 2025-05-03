@@ -140,6 +140,14 @@
   - Redirects to home, no actual subscription service
 - Added `placeholder` optional property to `FormField`
 
+## Commit 18 - "Categories Page" - 05/03/25
+
+- Fixed styling on Categories page
+  - Added padding to outter element of each category
+  - Moved overflow property to the inner element
+- Added strict sizings (min and max width) to `ProductCard`
+  - Each item is meant to be the same size to allow for cleaner positioning
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

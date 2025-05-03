@@ -10,7 +10,7 @@ import { FaStar, FaStarHalf } from "react-icons/fa6";
 export default function ProductCard({ product }: { product: Product }) {
   const cart = useContext(CartContext);
   return (
-    <div className="border border-neutral-200 bg-white flex flex-col rounded-lg overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg w-[200px] xl:w-[300px]">
+    <div className="border border-neutral-200 bg-white flex flex-col max-w-[300px] min-w-[300px] rounded-lg overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg w-full">
       <div className="relative h-[200px] overflow-hidden">
         <Image
           src={product.img}
