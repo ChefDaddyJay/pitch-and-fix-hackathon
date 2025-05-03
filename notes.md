@@ -10,7 +10,7 @@
   - 'x' buttons remove items from the drop-down
   - total is not calculated/NaN
   - 'Checkout' button doesn't function
-- Newlsletter form doesn't do anything, and the placeholder is obviously wrong
+- Newsletter form doesn't do anything, and the placeholder is obviously wrong
 - Footer "Follow us" links are misaligned
 - Layout is entirely non-responsive, breaks on small screen size
 
@@ -125,8 +125,22 @@
 - Implemented Partners Page
   - Partnership programs are displayed dynamically and transition to show a sign in form for the give partner
   - No authentication is implemented - Sign In button redirects to home
+  - Ideally, there would be a different sign in form for each type of partner and would redirect to different parts of the site
+
+## Commit 17 - "Home Page refresh" - 05/02/25
+
+- Fixed bug causing home page to display all products
+  - Limited display to first four products being fetched
+  - Ideally, "featured" items would be marked in the database to prevent unnecessary data transfer
+- Items displayed on Categories page now have unique keys
+- Changed styling to be more consistent with the rest of the site
+  - Change `CardGrid`s into `PageSection`s
+  - Category links now lead to Products page with appropriate search params
+- Redsigned newsletter subscription form with more consistent styling
+  - Redirects to home, no actual subscription service
+- Added `placeholder` optional property to `FormField`
 
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
-[] Home page is displaying all the sample products. This needs to be limited to 4 or put in a carousel
+[x] Home page is displaying all the sample products. This needs to be limited to 4 or put in a carousel

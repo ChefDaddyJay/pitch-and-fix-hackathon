@@ -71,10 +71,12 @@ export function Accordion({
 
 export function FormField({
   label,
+  placeholder,
   name,
   hidden,
 }: {
   label?: string;
+  placeholder?: string;
   name: string;
   hidden?: boolean;
 }) {
@@ -91,7 +93,7 @@ export function FormField({
         type={hidden ? "password" : "text"}
         name={name}
         className="w-full p-2 border border-neutral-300 rounded"
-        placeholder={label}
+        placeholder={placeholder ? placeholder : label}
       />
     </div>
   );
