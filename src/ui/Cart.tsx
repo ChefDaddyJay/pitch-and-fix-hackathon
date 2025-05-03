@@ -3,6 +3,7 @@
 import { CartContext } from "@/lib/Cart";
 import { Product } from "@/lib/definitions";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { useContext, useEffect, useRef, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -96,7 +97,7 @@ export function CartDropdownContent({ active }: { active: boolean }) {
         </p>
       </div>
       <button
-        onClick={() => (location.href = "/checkout")}
+        onClick={() => redirect("/checkout")}
         className="block w-full p-3 bg-blue-600 text-white border-0 rounded-sm font-bold cursor-pointer transition duration-300 "
       >
         Checkout

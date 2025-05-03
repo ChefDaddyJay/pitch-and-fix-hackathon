@@ -12,6 +12,7 @@ import {
   SubmitButton,
 } from "@/ui/UtilComponents";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { useContext, useState } from "react";
 import { GoCreditCard } from "react-icons/go";
@@ -96,9 +97,9 @@ export default function CheckoutPage() {
             <span className="pr-1">
               * By signing up or placing an order you are consenting to our
             </span>
-            <a href="#" className="underline">
+            <Link href="#" className="underline">
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

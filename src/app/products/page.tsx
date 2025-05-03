@@ -3,7 +3,7 @@ import Search from "@/ui/Search";
 import { PageSection } from "@/ui/UtilComponents";
 import { Product } from "@/lib/definitions";
 import Filters from "@/ui/Filters";
-import ProductCard from "@/ui/ProductCard";
+import ProductCard from "@/ui/Product";
 import { categories } from "@/lib/definitions";
 
 export default async function ProductsPage(props: {

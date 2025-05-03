@@ -2,7 +2,7 @@ import { fetchProducts } from "@/lib/data";
 import CategoryCard from "@/ui/CategoryCard";
 import Hero from "@/ui/Hero";
 import NewsletterForm from "@/ui/NewsletterForm";
-import ProductCard from "@/ui/ProductCard";
+import ProductCard from "@/ui/Product";
 import { PageSection } from "@/ui/UtilComponents";
 
 export default async function Home() {

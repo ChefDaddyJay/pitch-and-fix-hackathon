@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ReactNode } from "react";
 
 export default function FooterColumn({
@@ -12,7 +13,7 @@ export default function FooterColumn({
     for (const link of links) {
       formattedLinks.push(
         <li>
-          <a href={link.href}>{link.text}</a>
+          <Link href={link.href}>{link.text}</Link>
         </li>
       );
     }

@@ -7,6 +7,7 @@ import {
   PageSection,
   SubmitButton,
 } from "@/ui/UtilComponents";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default function ShippingPage() {
@@ -87,12 +88,12 @@ export default function ShippingPage() {
           </PageSection>
           <PageSection title="Email Us">
             <div className="w-4/5 mb-4">
-              <a
+              <Link
                 href="#"
                 className="border-b hover:text-blue-500 hover:border-blue-500"
               >
                 Service@ShopEase.com
-              </a>
+              </Link>
             </div>
           </PageSection>
           <PageSection title="Our Address">

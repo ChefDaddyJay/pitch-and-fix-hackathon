@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero({
   image,
   welcome,
@@ -22,12 +24,12 @@ export default function Hero({
         <p className="text-xl mb-8">
           {text || "Find the best products at the best prices"}
         </p>
-        <a
+        <Link
           href={buttonLink || "/products"}
           className="inline-block py-3 px-6 bg-amber-500 text-white rounded font-bold text-xl transition duration-300 hover:bg-amber-400"
         >
           {buttonText || "Shop Now"}
-        </a>
+        </Link>
       </div>
     </section>
   );

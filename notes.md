@@ -148,6 +148,20 @@
 - Added strict sizings (min and max width) to `ProductCard`
   - Each item is meant to be the same size to allow for cleaner positioning
 
+## Commit 19 - "Product Details Page" - 05/03/25
+
+- Implemented Product Details Page
+  - `ProductCard`s are now `Link`s to dynamically routed details pages
+  - Ideally, reviews would be retrieved from the database, but for now samples are given
+  - Each page includes product information and reviews
+- `/ui/Product.tsx` no contains
+  - `ProductCard` - a block display of Product information
+  - `ProductRating` - displays a dynamic number of stars, the rating, and the number of ratings
+  - `ProductReview` - displays an individual review of the product including the reviewer's name, date, and rating
+- Updated all anchor tags to `Link`s for smoother navigation with Next
+- Fixed Cart checkout button to use `redirect`
+- Removed `CardGrid.tsx` because it is no longer being used
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

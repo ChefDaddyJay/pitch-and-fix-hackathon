@@ -3,6 +3,7 @@
 import Image from "next/image";
 import CartDropdown from "./Cart";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Navbar({
   links,
@@ -26,14 +27,14 @@ export default function Navbar({
         <ul className="flex flex-row list-none gap-6">
           {links.map((link, i) => (
             <li key={`navlink-${i}`}>
-              <a
+              <Link
                 href={link.href}
                 className={`p-2 hover:text-blue-600 ${
                   path === link.href ? "text-blue-600" : ""
                 }`}
               >
                 {link.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

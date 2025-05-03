@@ -1,6 +1,6 @@
 import { fetchProductsByCategory } from "@/lib/data";
 import { categories, Product } from "@/lib/definitions";
-import ProductCard from "@/ui/ProductCard";
+import ProductCard from "@/ui/Product";
 import { PageSection } from "@/ui/UtilComponents";
 
 export default async function CategoriesPage() {
