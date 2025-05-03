@@ -120,6 +120,12 @@
   - No actual upload/communication is implemented
   - "Apply Now" redirects to homepage
 
+## Commit 16 - "Partners Page" - 05/02/25
+
+- Implemented Partners Page
+  - Partnership programs are displayed dynamically and transition to show a sign in form for the give partner
+  - No authentication is implemented - Sign In button redirects to home
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
