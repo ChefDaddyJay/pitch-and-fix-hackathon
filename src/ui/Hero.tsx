@@ -17,11 +17,13 @@ export default function Hero({
     <section
       className={`bg-neutral-500 bg-cover bg-center bg-[url(${
         image || "/images/hero_bg.jpg"
-      })] h-[500px] flex items-center justify-center text-white font-bold text-center`}
+      })] h-[300px] md:h-[500px] flex items-center justify-center text-white font-bold text-center`}
     >
-      <div className="max-w-[800px] p-8 bg-black/80 rounded">
-        <h1 className="text-5xl mb-4">{welcome || "Welcome to ShopEase"}</h1>
-        <p className="text-xl mb-8">
+      <div className="max-w-[800px] p-4 bg-black/50 h-min w-full rounded">
+        <h1 className="text-3xl md:text-5xl mb-4">
+          {welcome || "Welcome to ShopEase"}
+        </h1>
+        <p className="text-lg md:text-xl mb-8">
           {text || "Find the best products at the best prices"}
         </p>
         <Link

@@ -2,8 +2,7 @@
 
 import Navbar from "@/ui/Navbar";
 import "./globals.css";
-import Footer from "@/ui/Footer";
-import FooterColumn from "@/ui/FooterColumn";
+import Footer, { FooterColumn } from "@/ui/Footer";
 import { Cart, CartContext } from "@/lib/Cart";
 import { useEffect, useState } from "react";
 

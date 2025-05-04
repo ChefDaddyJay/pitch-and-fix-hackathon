@@ -162,6 +162,22 @@
 - Fixed Cart checkout button to use `redirect`
 - Removed `CardGrid.tsx` because it is no longer being used
 
+# Commit 20 - "Responsive Home Page" - 05/04/25
+
+- Added `flex-wrap` to the featured products and categories sections of the home page
+- Added `min-w-min` to `SubmitButton` to prevent shrinkage on smaller screens
+- Refactored NavBar
+  - All `Dropdown` components are now available through `/ui/Dropdown`
+  - Cart is now a `Dropdown`
+  - Under 768px screen width `NavLinks` can be found in a `Dropdown` from the site logo on the left
+- On smaller screens:
+  - Hero section becomes shorter and the greeting stretches to eventually take up the whole width of the screen
+  - Items displayed on the page shift into fewer columns as the size goes down thanks to `flex-wrap`
+  - Newsletter form shifts the button under the text input
+  - Footer shifts with other items on the page
+    - `FooterColumn` has been merged into `/ui/Footer`
+- Updated `lib/data.ts` to return `Product`s
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

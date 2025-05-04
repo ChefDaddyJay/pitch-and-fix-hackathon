@@ -11,7 +11,7 @@ export default async function CategoriesPage() {
           <div className="w-full p-4 overflow-hidden">
             <div className="flex w-full overflow-x-scroll gap-4 p-4 -z-10">
               {(await fetchProductsByCategory(category)).map((product) => (
-                <ProductCard product={product as Product} key={product.id} />
+                <ProductCard product={product} key={product.id} />
               ))}
             </div>
           </div>

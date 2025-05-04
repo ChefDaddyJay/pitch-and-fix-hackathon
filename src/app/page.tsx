@@ -15,12 +15,12 @@ export default async function Home() {
       <Hero />
       <div className="w-9/10 flex flex-col items-center gap-4 my-4 mx-auto">
         <PageSection title="Featured Products">
-          <div className="w-full flex justify-center gap-4 m-4">
+          <div className="w-full flex flex-wrap justify-center gap-4 m-4">
             {...products.slice(0, 4)}
           </div>
         </PageSection>
         <PageSection title="Shop by Category">
-          <div className="w-full flex justify-center gap-4 m-4">
+          <div className="w-full flex flex-wrap justify-center gap-4 m-4">
             <CategoryCard
               name="Electronics"
               src="/images/category1.jpg"

@@ -4,19 +4,21 @@ import { isEmpty } from "./utils";
 
 // Mock database calls
 export async function fetchProducts() {
-  return SampleProducts.map((product) => product as Product);
+  return SampleProducts as Product[];
 }
 
 export async function fetchProductById(id: string) {
   const product = SampleProducts.find((product) => product.id === id);
   if (product) {
-    return product;
+    return product as Product;
   }
   throw new Error(`Product id ${id} not found.`);
 }
 
 export async function fetchProductsByCategory(category: string) {
-  return SampleProducts.filter((product) => product.category === category);
+  return SampleProducts.filter(
+    (product) => product.category === category
+  ) as Product[];
 }
 
 export async function fetchFilteredProducts(
@@ -38,7 +40,7 @@ export async function fetchFilteredProducts(
   }
   res = res.filter((product) => product.price < price);
 
-  return res;
+  return res as Product[];
 }
 
 export async function fetchBlogPosts() {

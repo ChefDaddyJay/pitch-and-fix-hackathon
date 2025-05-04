@@ -36,7 +36,7 @@ export default async function ProductDetails({
       <div className="w-4/5 flex justify-center gap-4">
         <div className="w-1/4 flex flex-col sticky top-4 h-min">
           <PageSection>
-            <ProductCard product={product as Product} />
+            <ProductCard product={product} />
           </PageSection>
         </div>
         <div className="w-full flex flex-col gap-4">

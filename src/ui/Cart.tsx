@@ -2,45 +2,26 @@
 
 import { CartContext } from "@/lib/Cart";
 import { Product } from "@/lib/definitions";
+import { Dropdown, DropdownButton, DropdownContent } from "@/ui/Dropdown";
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 
 export default function CartDropdown() {
-  const [active, setActive] = useState(false);
   const { cart, updateCart } = useContext(CartContext);
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleOutsideClick = (event: MouseEvent) => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
-      setActive(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, []);
 
   return (
-    <div className="relative" ref={ref}>
-      {/* Cart Icon */}
-      <div
-        className="text-base cursor-pointer relative flex items-center"
-        onClick={() => setActive(!active)}
-      >
+    <Dropdown>
+      <DropdownButton>
         <FaShoppingCart className="mr-2" />
         <div className="bg-amber-500 text-white rounded-[50%] w-5 h-5 flex justify-center items-center font-xs mr-2">
           {cart.products.length}
         </div>
         <div>$ {cart.calcTotal()}</div>
-      </div>
-
-      <CartDropdownContent active={active} />
-    </div>
+      </DropdownButton>
+      <CartDropdownContent />
+    </Dropdown>
   );
 }
 
@@ -69,7 +50,7 @@ export function CartSummary() {
   );
 }
 
-export function CartDropdownContent({ active }: { active: boolean }) {
+export function CartDropdownContent() {
   const { cart, updateCart } = useContext(CartContext);
 
   const products = cart.products.map((entry) => {
@@ -83,11 +64,7 @@ export function CartDropdownContent({ active }: { active: boolean }) {
   });
 
   return (
-    <div
-      className={`absolute right-0 top-full w-[300px] bg-white shadow-md rounded p-4 z-10 ${
-        active ? "block" : "hidden"
-      }`}
-    >
+    <DropdownContent hDir="left">
       <div className="max-h-[300px] overflow-y-auto mb-4 flex flex-col gap-2">
         {...products}
       </div>
@@ -102,7 +79,7 @@ export function CartDropdownContent({ active }: { active: boolean }) {
       >
         Checkout
       </button>
-    </div>
+    </DropdownContent>
   );
 }
 
@@ -114,7 +91,7 @@ export function CartItem({
   amount: number;
 }) {
   return (
-    <div key={product.id} className="px-2 py-1 flex flex-wrap justify-between">
+    <div className="px-2 py-1 flex flex-wrap justify-between">
       <div className="w-full flex items-center gap-2 pb-2">
         <Image src={product.img} width={50} height={50} alt={product.name} />
         {product.name}

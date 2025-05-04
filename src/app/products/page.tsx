@@ -46,7 +46,7 @@ export default async function ProductsPage(props: {
         <div className="m-4 flex flex-wrap justify-center gap-4">
           {products.length > 0 ? (
             products.map((product) => (
-              <ProductCard product={product as Product} key={product.id} />
+              <ProductCard product={product} key={product.id} />
             ))
           ) : (
             <h2 className="w-full text-2xl font-bold text-neutral-400">
