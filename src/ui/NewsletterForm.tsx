@@ -1,7 +1,8 @@
 "use client";
 
 import { redirect } from "next/navigation";
-import { FormField, PageSection, SubmitButton } from "./UtilComponents";
+import { FormField, SubmitButton } from "./FormComponents";
+import { PageSection } from "./LayoutComponents";
 
 export default function NewsletterForm() {
   return (

@@ -5,7 +5,7 @@ import { Product } from "@/lib/definitions";
 import AddToCartBtn from "./AddToCartBtn";
 import { FaStar, FaStarHalf } from "react-icons/fa6";
 import Link from "next/link";
-import { HorizontalDivider, PageSection } from "./UtilComponents";
+import { HorizontalDivider, PageSection } from "./LayoutComponents";
 
 export default function ProductCard({ product }: { product: Product }) {
   return (

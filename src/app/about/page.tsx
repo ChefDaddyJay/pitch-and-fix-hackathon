@@ -1,4 +1,4 @@
-import { PageSection } from "@/ui/UtilComponents";
+import { PageSection } from "@/ui/LayoutComponents";
 
 export default function AboutPage() {
   return (

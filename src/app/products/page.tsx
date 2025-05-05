@@ -1,6 +1,6 @@
 import { fetchFilteredProducts } from "@/lib/data";
 import Search from "@/ui/Search";
-import { PageSection } from "@/ui/UtilComponents";
+import { PageSection } from "@/ui/LayoutComponents";
 import Filters from "@/ui/Filters";
 import ProductCard from "@/ui/Product";
 import { categories } from "@/lib/definitions";

@@ -178,7 +178,7 @@
     - `FooterColumn` has been merged into `/ui/Footer`
 - Updated `lib/data.ts` to return `Product`s
 
-# Commit 21 - "More responsive updates and final touches" - 05/02/25
+# Commit 21 - "More responsive updates and final touches" - 05/05/25
 
 - Responsive design fixes throughout the site. On smaller screens:
   - Checkout page shifts to one column
@@ -195,6 +195,18 @@
   - Partners page transitions programs list to the bottom instead of the left
 - Fixed the Hero section of the Partners page
 - Follow Us links in Footer now lead to their respective sites, opening in a new tab
+
+# Commit 22 - "Last minute fixes" - 05/05/25
+
+- Added promo code feature to Checkout page
+  - Currently only accepts "DevSlopes2025" and gives a $29.99 discount, before tax
+- Fleshed out product details pages
+  - Now includes a set of images under the title (ideally for different angles, though for now it just shows the same image)
+  - Color Options are now displayed, though they have no effect (ideally these would change the images to display a version of the product in the given color)
+  - Now includes a section for technical information, currently hardcoded (ideally this would be fetched from the database along with the other product information)
+    - This section shifts from a table to a single column on smaller screens
+  - Refund/Return Policy and Warranty are displayed in `Accordion`s
+- Split `UtilComponents` into `Accordion`, `LayoutComponents`, and `FormComponents`
 
 ## Bug Notes
 

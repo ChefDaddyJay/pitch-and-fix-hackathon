@@ -1,7 +1,7 @@
 "use client";
 
 import Hero from "@/ui/Hero";
-import { FormField, PageSection, SubmitButton } from "@/ui/UtilComponents";
+import { FormField, PageSection } from "@/ui/LayoutComponents";
 import { redirect } from "next/navigation";
 import { useDropzone } from "react-dropzone";
 import { SetStateAction, useCallback, useState } from "react";

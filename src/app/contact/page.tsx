@@ -1,6 +1,7 @@
 "use client";
 
-import { FormField, PageSection, SubmitButton } from "@/ui/UtilComponents";
+import { FormField, SubmitButton } from "@/ui/FormComponents";
+import { PageSection } from "@/ui/LayoutComponents";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 

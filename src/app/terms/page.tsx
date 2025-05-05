@@ -1,4 +1,5 @@
-import { Accordion, PageSection } from "@/ui/UtilComponents";
+import { PageSection } from "@/ui/LayoutComponents";
+import { Accordion } from "@/ui/Accordion";
 
 export default function TermsPage() {
   return (

@@ -1,16 +1,15 @@
 "use client";
 
 import { CartContext } from "@/lib/Cart";
+import { Accordion } from "@/ui/Accordion";
 import { CartItem, CartSummary } from "@/ui/Cart";
 import {
-  Accordion,
   AddressForm,
   Checkbox,
   FormField,
-  HorizontalDivider,
-  PageSection,
   SubmitButton,
-} from "@/ui/UtilComponents";
+} from "@/ui/FormComponents";
+import { HorizontalDivider, PageSection } from "@/ui/LayoutComponents";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -20,6 +19,7 @@ import { GoCreditCard } from "react-icons/go";
 export default function CheckoutPage() {
   const { cart, updateCart } = useContext(CartContext);
   const [shipping, setShipping] = useState(9);
+  const [promo, setPromo] = useState({ code: "", valid: false, amount: 0 });
   const shippingOpts = [
     { price: 0, time: "3 - 7", name: "Regular UPS Ground", poBox: true },
     { price: 9, time: "1 - 3", name: "Express UPS Air", poBox: false },
@@ -27,6 +27,15 @@ export default function CheckoutPage() {
   ];
   const changeShipping = (option: number) => {
     setShipping(shippingOpts[option].price);
+  };
+  const checkPromo = () => {
+    if (promo.code === "DevSlopes2025") {
+      setPromo({
+        code: promo.code,
+        valid: true,
+        amount: 29.99,
+      });
+    }
   };
 
   return (
@@ -83,8 +92,27 @@ export default function CheckoutPage() {
           <PageSection title="Payment Options">
             <PaymentMethods />
           </PageSection>
+          <PageSection title="Promo Code">
+            <div className="w-full flex p-4 gap-4 items-center">
+              <div className="flex-grow">
+                <FormField
+                  name="promo"
+                  placeholder="Promo Code"
+                  onChange={(value: string) =>
+                    setPromo({ code: value, valid: false, amount: 0 })
+                  }
+                />
+              </div>
+              <div className="flex-shrink">
+                <SubmitButton text="Submit" onClick={checkPromo} />
+              </div>
+            </div>
+          </PageSection>
           <PageSection title="Order Summary">
-            <OrderSummary shipping={shipping} />
+            <OrderSummary
+              shipping={shipping}
+              promo={promo.valid ? promo.amount : 0}
+            />
           </PageSection>
           <SubmitButton
             text="Complete Order"
@@ -107,15 +135,26 @@ export default function CheckoutPage() {
   );
 }
 
-export function OrderSummary({ shipping }: { shipping: number }) {
+export function OrderSummary({
+  shipping,
+  promo,
+}: {
+  shipping: number;
+  promo: number;
+}) {
   const { cart, updateCart } = useContext(CartContext);
   const subtotal = Number(cart.calcTotal());
-  const tax = (subtotal * 0.0825).toFixed(2);
-  const orderTotal = subtotal + Number(tax) + shipping;
+  const tax = ((subtotal - promo) * 0.0825).toFixed(2);
+  const orderTotal = subtotal - promo + Number(tax) + shipping;
 
   return (
     <div className="w-4/5">
       <CartSummary />
+      {promo > 0 && (
+        <div className="flex justify-between items-center mb-4 text-amber-500">
+          <div>Promo Code</div> <div className="font-bold">- $ {promo}</div>
+        </div>
+      )}
       <div className="flex justify-between items-center">
         <div>Shipping</div>{" "}
         <div className="font-bold">$ {shipping.toFixed(2)}</div>

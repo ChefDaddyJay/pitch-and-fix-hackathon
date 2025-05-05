@@ -2,7 +2,11 @@ This is Joshua Tryon's submission for the April 2025 DevSlopes Pitch-and-Fix Hac
 
 # Project Status
 
-The site is as fully functional as it can be at this point without having any backend support. All links lead to valid pages and buttons trigger actions, though that's mostly just redirecting to the home page at this point. The next step is to make the styling more responsive. Right now, it only looks right on wide screens.
+The site is as fully functional as it can be at this point without having any backend support. All links lead to valid pages and buttons trigger actions, though that's mostly just redirecting to the home page for now. Products can be added to the cart from various places throughout the site, and cart data persists across pages and sessions. The Products page supports searching and filtering of items by tag, price, and category. Other pages, such as 'About Us', 'FAQ' and 'Careers' have dummy content that would be replaced in production.
+
+All of the data being displayed is for demonstration only. [SampleData](./src/lib/SampleData.json) is a list of products with different combinations of the same names and images, used to fill space in place of an actual database. As a result, a product may be labeled "Laptop Bag" but have a picture of a bluetooth speaker. This isn't a bug, just a lack of data.
+
+All pages are responsive to screen size, shifting to a largely single-column layout as the screen gets smaller.
 
 (See [notes](./notes.md) for detailed commit notes)
 
@@ -14,11 +18,11 @@ The site is as fully functional as it can be at this point without having any ba
 
 - Install dependencies
 
-`npm -i`
+`npm -i` or `pnpm -1`
 
 - Run the development server
 
-`npm run dev`
+`npm run dev` or `pnpm run dev`
 
 - Navigate to the site
 

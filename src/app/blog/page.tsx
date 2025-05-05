@@ -1,5 +1,5 @@
 import { fetchBlogPosts } from "@/lib/data";
-import { HorizontalDivider, PageSection } from "@/ui/UtilComponents";
+import { HorizontalDivider, PageSection } from "@/ui/LayoutComponents";
 import Image from "next/image";
 
 export default async function BlogPage() {

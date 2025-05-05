@@ -1,4 +1,5 @@
-import { Accordion, HorizontalDivider, PageSection } from "@/ui/UtilComponents";
+import { HorizontalDivider, PageSection } from "@/ui/LayoutComponents";
+import { Accordion } from "@/ui/Accordion";
 
 export default function FAQPage() {
   const questions = [

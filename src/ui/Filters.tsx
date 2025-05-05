@@ -1,7 +1,8 @@
 "use client";
 
 import { categories } from "@/lib/definitions";
-import { Accordion, HorizontalDivider, PageSection } from "./UtilComponents";
+import { HorizontalDivider, PageSection } from "./LayoutComponents";
+import { Accordion } from "./Accordion";
 import { useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 

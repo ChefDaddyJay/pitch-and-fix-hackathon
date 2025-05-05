@@ -1,10 +1,11 @@
 "use client";
 
 import Hero from "@/ui/Hero";
-import { FormField, PageSection, SubmitButton } from "@/ui/UtilComponents";
+import { FormField, SubmitButton } from "@/ui/FormComponents";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState } from "react";
+import { PageSection } from "@/ui/LayoutComponents";
 
 export default function PartnersPage() {
   const [focus, setFocus] = useState(0);

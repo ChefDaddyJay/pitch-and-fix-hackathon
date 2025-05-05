@@ -3,7 +3,7 @@ import CategoryCard from "@/ui/CategoryCard";
 import Hero from "@/ui/Hero";
 import NewsletterForm from "@/ui/NewsletterForm";
 import ProductCard from "@/ui/Product";
-import { PageSection } from "@/ui/UtilComponents";
+import { PageSection } from "@/ui/LayoutComponents";
 
 export default async function Home() {
   const products =
