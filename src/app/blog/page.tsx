@@ -12,15 +12,15 @@ export default async function BlogPage() {
           <HorizontalDivider text="ShopEase Blog" />
         </PageSection>
         {posts ? (
-          posts.map((post) => (
-            <PageSection title={post.title}>
+          posts.map((post, i) => (
+            <PageSection title={post.title} key={`${post.title}-${i}`}>
               <div className="w-7/10 pb-4">
-                <div className="float-left mr-4 py-4 w-max">
+                <div className="float-left mr-4 py-4 w-full md:w-max">
                   <Image
                     src={post.image}
                     alt="Blog post image"
                     width={300}
-                    height={300}
+                    height={200}
                   />
                 </div>
                 {post.body}

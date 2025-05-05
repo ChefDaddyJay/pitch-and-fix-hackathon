@@ -18,30 +18,36 @@ export default function PartnersPage() {
 
   return (
     <>
-      <Hero />
-      <div className="w-full flex justify-center gap-4 m-4">
+      <Hero
+        image="/images/partners_hero.jpg"
+        welcome="Welcome ShopEase Partners"
+        text=" "
+        buttonText="Join Now"
+        buttonLink="/partners#partnerships"
+      />
+      <div className="w-full flex flex-col md:flex-row justify-between gap-4 p-4">
         <div
           className={`flex flex-wrap justify-center gap-4 transition-all duration-300 ${
-            focus === 0 ? "max-w-4/5 flex-row" : "w-1/5 flex-col"
+            focus === 0 ? "flex-row" : "w-full md:w-min flex-col"
           }`}
+          id="partnerships"
         >
           {programs.map((program, i) => (
             <div
               onClick={() => setFocus(i + 1)}
-              className={`${focus === i + 1 ? "order-1" : "order-last"} ${
-                focus === 0 ? "w-1/4" : "w-full"
-              } transition-[order] duration-300 w-1/4`}
+              className={`${
+                focus === 0 ? "w-full md:w-1/4" : "w-full"
+              } min-w-[300px] mb-4`}
               key={program}
             >
               <PageSection title={program} activeFocus={focus !== i + 1}>
-                <div className="z-10">
-                  <Image
-                    src={`/images/${program.toLowerCase()}.jpg`}
-                    alt={`${program} Image`}
-                    width={300}
-                    height={300}
-                  />
-                </div>
+                <Image
+                  src={`/images/${program.toLowerCase()}.jpg`}
+                  alt={`${program} Image`}
+                  width={300}
+                  height={300}
+                  className="z-10"
+                />
                 <div
                   className={`w-4/5 overflow-hidden ${
                     focus === i + 1 || focus === 0
@@ -61,8 +67,10 @@ export default function PartnersPage() {
         </div>
         <div
           className={`${
-            focus !== 0 ? "max-w-screen w-3/4 delay-0" : "max-w-0 delay-200"
-          } transition-max-w duration-500 ease-in overflow-x-hidden`}
+            focus !== 0
+              ? "max-h-screen w-full md:w-[400px] lg:w-2/3 xl:w-3/4 2xl:w-4/5"
+              : "max-h-0"
+          } order-first md:order-none transition-max-h duration-500 ease-in overflow-hidden h-min md:sticky top-4 z-50`}
         >
           <PageSection title={`${programs[focus - 1]} Sign In`}>
             <div className="w-4/5 flex flex-col gap-4 pb-4">

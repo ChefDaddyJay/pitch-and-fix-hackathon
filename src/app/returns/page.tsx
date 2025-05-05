@@ -3,7 +3,6 @@
 import {
   Accordion,
   FormField,
-  HorizontalDivider,
   PageSection,
   SubmitButton,
 } from "@/ui/UtilComponents";
@@ -12,7 +11,7 @@ import { redirect } from "next/navigation";
 
 export default function ShippingPage() {
   return (
-    <div className="w-full flex justify-center flex-wrap m-4 gap-4">
+    <div className="w-full flex justify-center flex-wrap p-4 gap-4">
       <div className="w-4/5 flex flex-col gap-4">
         <PageSection>
           <Accordion title="Return / Refun Policy">
@@ -56,11 +55,11 @@ export default function ShippingPage() {
           </Accordion>
         </PageSection>
       </div>
-      <div className="w-4/5 flex gap-4">
-        <div className="w-3/4">
+      <div className="w-4/5 flex flex-wrap lg:flex-nowrap gap-4">
+        <div className="w-full lg:w-3/4">
           <PageSection title="Request Refund">
             <div className="w-4/5 flex flex-col gap-4 m-4">
-              <div className="flex justify-evenly gap-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-evenly gap-4">
                 <div className="w-full">
                   <FormField name="First Name" label="First Name" />
                 </div>
@@ -82,7 +81,7 @@ export default function ShippingPage() {
             </div>
           </PageSection>
         </div>
-        <div className="w-1/4 sticky top-4 h-max">
+        <div className="w-full lg:w-1/4 lg:sticky top-4 h-max">
           <PageSection title="Call Us">
             <div className="w-4/5 mb-4">+1 (555) 123 - 4567</div>
           </PageSection>

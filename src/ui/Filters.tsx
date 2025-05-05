@@ -1,7 +1,7 @@
 "use client";
 
 import { categories } from "@/lib/definitions";
-import { HorizontalDivider, PageSection } from "./UtilComponents";
+import { Accordion, HorizontalDivider, PageSection } from "./UtilComponents";
 import { useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
@@ -37,40 +37,46 @@ export default function Filters({ filters }: { filters: Filter[] }) {
   };
 
   return (
-    <PageSection title="Filters">
-      <ul className="list-none flex flex-col gap-2 w-4/5 mb-4">
-        <FilterCheckbox
-          option={filters[0].option}
-          active={activeFilters[filters[0].filter]?.includes(filters[0].option)}
-          onChange={() => handleChange(filters[0].filter, filters[0].option)}
-        />
-        <FilterCheckbox
-          option={filters[1].option}
-          active={activeFilters[filters[1].filter]?.includes(filters[1].option)}
-          onChange={() => handleChange(filters[1].filter, filters[1].option)}
-        />
-        <FilterRange
-          filter={filters[2].filter}
-          active={Number(activeFilters[filters[2].filter][0]) || 1000}
-          min={100}
-          max={1000}
-          step={100}
-          onChange={(value: string) => {
-            handleChange(filters[2].filter, Number(value));
-          }}
-        />
-        <li className="w-full flex items-center justify-center" key="div-1">
-          <HorizontalDivider text="Categories" />
-        </li>
-        {categories.map((category) => (
+    <PageSection>
+      <Accordion title="Filters">
+        <ul className="list-none flex flex-col gap-2 w-full mb-4">
           <FilterCheckbox
-            option={category}
-            active={activeFilters[filters[3].filter].includes(category)}
-            onChange={() => handleChange(filters[3].filter, category)}
-            key={category}
+            option={filters[0].option}
+            active={activeFilters[filters[0].filter]?.includes(
+              filters[0].option
+            )}
+            onChange={() => handleChange(filters[0].filter, filters[0].option)}
           />
-        ))}
-      </ul>
+          <FilterCheckbox
+            option={filters[1].option}
+            active={activeFilters[filters[1].filter]?.includes(
+              filters[1].option
+            )}
+            onChange={() => handleChange(filters[1].filter, filters[1].option)}
+          />
+          <FilterRange
+            filter={filters[2].filter}
+            active={Number(activeFilters[filters[2].filter][0]) || 1000}
+            min={100}
+            max={1000}
+            step={100}
+            onChange={(value: string) => {
+              handleChange(filters[2].filter, Number(value));
+            }}
+          />
+          <li className="w-full flex items-center justify-center" key="div-1">
+            <HorizontalDivider text="Categories" />
+          </li>
+          {categories.map((category) => (
+            <FilterCheckbox
+              option={category}
+              active={activeFilters[filters[3].filter].includes(category)}
+              onChange={() => handleChange(filters[3].filter, category)}
+              key={category}
+            />
+          ))}
+        </ul>
+      </Accordion>
     </PageSection>
   );
 }

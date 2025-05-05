@@ -30,13 +30,13 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full h-max px-auto m-4">
+    <div className="flex flex-col items-center w-full h-max px-auto p-4">
       <div className="w-4/5 bg-white flex flex-col items-center">
         <h2 className="text-2xl text-neutral-800 font-bold p-4 w-4/5 text-center mb-4">
           Express Pay
         </h2>
 
-        <div className="w-1/3">
+        <div className="w-min">
           <PayPalScriptProvider options={{ clientId: "test" }}>
             <PayPalButtons style={{ layout: "horizontal" }} />
           </PayPalScriptProvider>
@@ -45,7 +45,7 @@ export default function CheckoutPage() {
 
       <HorizontalDivider text="OR" />
 
-      <div className="flex justify-evenly gap-4 w-4/5">
+      <div className="flex flex-col lg:flex-row justify-evenly gap-4 w-4/5">
         <PageSection title="Review Order">
           <div className="flex flex-col gap-2 w-4/5 border-b border-neutral-300 pb-4">
             {cart.products.map((entry) => {
@@ -125,7 +125,7 @@ export function OrderSummary({ shipping }: { shipping: number }) {
       </div>
       <div className="bg-neutral-400 flex justify-between items-center p-4">
         <div className="font-bold text-2xl">Order Total</div>
-        <div className="font-bold text-3xl">$ {orderTotal}</div>
+        <div className="font-bold text-3xl">$ {orderTotal.toFixed(2)}</div>
       </div>
       <Checkbox
         label="Email me about new products and deals"
@@ -236,7 +236,7 @@ export function ShippingOption({
         <div>{name}</div>
         <div className="text-sm text-neutral-500">{description}</div>
         <div className="text-sm">
-          {!poBox ? "Not available for P.O. Boxes" : ""}
+          {!poBox && "Not available for P.O. Boxes"}
         </div>
       </div>
       <div className="w-1/5 flex justify-center items-center">

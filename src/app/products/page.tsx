@@ -1,7 +1,6 @@
 import { fetchFilteredProducts } from "@/lib/data";
 import Search from "@/ui/Search";
 import { PageSection } from "@/ui/UtilComponents";
-import { Product } from "@/lib/definitions";
 import Filters from "@/ui/Filters";
 import ProductCard from "@/ui/Product";
 import { categories } from "@/lib/definitions";
@@ -33,8 +32,8 @@ export default async function ProductsPage(props: {
   ];
 
   return (
-    <div className="flex gap-4 justify-center p-4 w-full h-max px-auto">
-      <div className="sticky top-4 h-max flex flex-col  gap-4 items-center w-1/5">
+    <div className="flex flex-col md:flex-row gap-4 justify-center p-4 w-full h-max px-auto">
+      <div className="md:sticky top-4 h-max flex flex-col gap-4 items-center w-full md:w-1/5 min-w-[200px]">
         <PageSection>
           <div className="p-4 w-full flex justify-center">
             <Search placeholder="Search products..." />

@@ -71,10 +71,26 @@ export default function RootLayout({
             <FooterColumn
               title="Follow Us"
               links={[
-                { text: "Facebook", href: "#" },
-                { text: "Twitter", href: "#" },
-                { text: "Instagram", href: "#" },
-                { text: "Pinterest", href: "#" },
+                {
+                  text: "Facebook",
+                  href: "http://www.facebook.com",
+                  target: "_blank",
+                },
+                {
+                  text: "Twitter",
+                  href: "http://www.twitter.com",
+                  target: "_blank",
+                },
+                {
+                  text: "Instagram",
+                  href: "http://www.instagram.com",
+                  target: "_blank",
+                },
+                {
+                  text: "Pinterest",
+                  href: "http://www.pinterest.com",
+                  target: "_blank",
+                },
               ]}
             />
           </Footer>

@@ -42,13 +42,13 @@ export function Accordion({
   };
 
   return (
-    <div>
+    <div className="w-full">
       <div
         className="flex items-center justify-between w-full h-[60px] p-4 font-semibold border border-neutral-300 hover:bg-neutral-100 transition-colors duration-300"
         onClick={toggle}
         aria-expanded={open}
       >
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 w-4/5 items-center">
           <Icon />
           {title}
         </div>
@@ -249,7 +249,7 @@ export function PageSection({
     ? cols === 2
       ? "w-2/5"
       : cols === 3
-      ? "w-1/5"
+      ? "w-1/3"
       : cols === 4
       ? "w-1/6"
       : "w-full" // cols = 1 is full, other values are not supported

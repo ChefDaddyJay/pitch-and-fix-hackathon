@@ -23,10 +23,10 @@ export default function CareersPage() {
         image="/images/careers_hero.jpg"
       />
       <div className="w-full flex justify-center p-4">
-        <div className="w-3/5">
+        <div className="w-4/5">
           <PageSection title="Start Your Application">
             <div className="w-4/5 flex flex-col gap-4 m-4">
-              <div className="flex justify-evenly gap-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-evenly gap-4">
                 <div className="w-full">
                   <FormField name="First Name" label="First Name" />
                 </div>

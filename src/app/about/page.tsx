@@ -2,7 +2,7 @@ import { PageSection } from "@/ui/UtilComponents";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col items-center w-full h-max px-auto m-4">
+    <div className="flex flex-col items-center w-full h-max px-auto my-4  ">
       <div className="w-4/5 bg-white flex flex-col items-center">
         <PageSection title="About Us">
           <div className="m-4">
@@ -13,7 +13,7 @@ export default function AboutPage() {
         </PageSection>
       </div>
       <div className="flex justify-center w-full">
-        <div className="flex justify-evenly gap-4 w-4/5 m-4">
+        <div className="flex flex-wrap md:flex-nowrap justify-evenly gap-4 w-4/5 m-4">
           <PageSection title="Lorem Ipsum">
             <div className="m-4">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum

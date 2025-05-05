@@ -1,5 +1,5 @@
 import { fetchProductById } from "@/lib/data";
-import { Product } from "@/lib/definitions";
+import Image from "next/image";
 import ProductCard, { ProductRating, ProductReview } from "@/ui/Product";
 import { HorizontalDivider, PageSection } from "@/ui/UtilComponents";
 
@@ -32,18 +32,24 @@ export default async function ProductDetails({
   ];
 
   return (
-    <div className="w-full flex justify-center m-4">
-      <div className="w-4/5 flex justify-center gap-4">
-        <div className="w-1/4 flex flex-col sticky top-4 h-min">
-          <PageSection>
-            <ProductCard product={product} />
-          </PageSection>
-        </div>
-        <div className="w-full flex flex-col gap-4">
-          <PageSection>
+    <div className="w-full flex justify-center p-4 gap-4">
+      <div className="w-1/4 flex-col sticky top-4 h-min hidden xl:flex">
+        <ProductCard product={product} />
+      </div>
+      <div className="w-full flex flex-col gap-4">
+        <PageSection>
+          <div className="w-full flex flex-col sm:flex-row gap-4">
+            <div className="w-full min-w-[200px] md:w-1/2 xl:hidden">
+              <Image
+                src={product.img}
+                width={400}
+                height={200}
+                alt={`${product.name} image`}
+              />
+            </div>
             <div className="p-4 w-full flex flex-col gap-4">
-              <div className="border-b border-neutral-300 flex justify-between">
-                <div className="flex items-center gap-2 pb-2">
+              <div className="border-b border-neutral-300 w-full flex justify-between">
+                <div className="w-full flex items-end gap-2 pb-2 ">
                   <h1 className="font-bold text-3xl text-neutral-800">
                     {product.name}{" "}
                   </h1>
@@ -68,36 +74,36 @@ export default async function ProductDetails({
                 </div>
               </div>
             </div>
-          </PageSection>
-          <PageSection title="Product Information">
-            <div className="w-full p-4 flex flex-col gap-4">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                et explicabo recusandae dolorem delectus fuga numquam distinctio
-                voluptate harum cum. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Impedit, nam aperiam. Esse facere saepe
-                aliquid provident explicabo molestias aliquam eius numquam odit.
-                Similique, ipsa? Nisi consequuntur qui quaerat nesciunt sit.
-              </p>
-              <ul className="list-disc px-8">
-                <li>Lorem ipsum</li>
-                <li>Dolor sit amet</li>
-                <li>Consectetur adipisicing</li>
-              </ul>
-            </div>
-          </PageSection>
-          <div className="w-full flex justify-center">
-            <HorizontalDivider text="Reviews" />
           </div>
-          {reviews.map((review) => (
-            <ProductReview
-              name={review.name}
-              rating={review.rating}
-              review={review.review}
-              key={review.name}
-            />
-          ))}
+        </PageSection>
+        <PageSection title="Product Information">
+          <div className="w-full p-4 flex flex-col gap-4">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore et
+              explicabo recusandae dolorem delectus fuga numquam distinctio
+              voluptate harum cum. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Impedit, nam aperiam. Esse facere saepe aliquid
+              provident explicabo molestias aliquam eius numquam odit.
+              Similique, ipsa? Nisi consequuntur qui quaerat nesciunt sit.
+            </p>
+            <ul className="list-disc px-8">
+              <li>Lorem ipsum</li>
+              <li>Dolor sit amet</li>
+              <li>Consectetur adipisicing</li>
+            </ul>
+          </div>
+        </PageSection>
+        <div className="w-full flex justify-center">
+          <HorizontalDivider text="Reviews" />
         </div>
+        {reviews.map((review) => (
+          <ProductReview
+            name={review.name}
+            rating={review.rating}
+            review={review.review}
+            key={review.name}
+          />
+        ))}
       </div>
     </div>
   );

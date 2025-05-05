@@ -178,6 +178,24 @@
     - `FooterColumn` has been merged into `/ui/Footer`
 - Updated `lib/data.ts` to return `Product`s
 
+# Commit 21 - "More responsive updates and final touches" - 05/02/25
+
+- Responsive design fixes throughout the site. On smaller screens:
+  - Checkout page shifts to one column
+  - Products page shifts search and filters to the top (single column)
+    - Filters are now inside an `Accordion` to save space on smaller screens
+  - `ProductCard` is hidden on product details pages and replaced by an image in the main column
+    - On very small screens, the product name, price and rating shift under this picture
+  - Catgeories page shifts to single column
+  - Contact Us page moves contact information to the top and the form to the bottom ina single column
+    - Also at 768px the First Name and Last Name fields shift to a single column
+  - Returns page flexes similarly to the Contact Us page, but places the contact information at the bottom
+  - Blog page stop the text from wrapping the image
+  - Careers page form shifts first and last names into a single column
+  - Partners page transitions programs list to the bottom instead of the left
+- Fixed the Hero section of the Partners page
+- Follow Us links in Footer now lead to their respective sites, opening in a new tab
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings

@@ -21,14 +21,16 @@ export function FooterColumn({
   links,
 }: {
   title: string;
-  links: { text: string; href: string }[];
+  links: { text: string; href: string; target?: string }[];
 }) {
   const buildLinks = () => {
     let formattedLinks: ReactNode[] = [];
     for (const link of links) {
       formattedLinks.push(
         <li>
-          <Link href={link.href}>{link.text}</Link>
+          <Link href={link.href} target={link.target}>
+            {link.text}
+          </Link>
         </li>
       );
     }
