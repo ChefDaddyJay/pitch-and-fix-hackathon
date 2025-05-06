@@ -208,6 +208,15 @@
   - Refund/Return Policy and Warranty are displayed in `Accordion`s
 - Split `UtilComponents` into `Accordion`, `LayoutComponents`, and `FormComponents`
 
+# Commit 23 - "Final draft" - 05/05/25
+
+- Fixed and removed unnecessary imports
+- Stopped exports from `page.tsx` files to comply with NextJS standards
+- `RefundPolicy` and `Warranty` are now located in `/ui/Policies`
+- `fetchFilteredProducts` is no longer case sensitive
+- Dynamic styling of `ColorBlock` and `Hero` bcakgrounds moved to style tags to prevent conflicts with TailwindCSS
+- Navbar dropdown is now hidden instead of invisible on larger screens
+
 ## Bug Notes
 
 [x] Product cards should display a rating, not just the number of ratings
