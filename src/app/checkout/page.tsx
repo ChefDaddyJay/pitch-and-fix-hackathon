@@ -135,7 +135,7 @@ export default function CheckoutPage() {
   );
 }
 
-export function OrderSummary({
+function OrderSummary({
   shipping,
   promo,
 }: {
@@ -174,7 +174,7 @@ export function OrderSummary({
   );
 }
 
-export function PaymentMethods() {
+function PaymentMethods() {
   const [openPayment, setOpenPayment] = useState(0);
   const changePayment = (method: number) => {
     if (openPayment === method) {
@@ -215,7 +215,7 @@ export function PaymentMethods() {
   );
 }
 
-export function ShippingOptions({
+function ShippingOptions({
   options,
   preferred,
   handleChange,
@@ -250,7 +250,7 @@ export function ShippingOptions({
   );
 }
 
-export function ShippingOption({
+function ShippingOption({
   price,
   name,
   description,

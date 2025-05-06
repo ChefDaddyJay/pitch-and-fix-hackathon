@@ -18,7 +18,8 @@ export function SubmitButton({
 export function ColorBlock({ color }: { color: string }) {
   return (
     <div
-      className={`bg-${color.toLowerCase()}-800 w-[100px] h-[100px] flex justify-center items-center text-white hover:shadow hover:-translate-y-2 transition-all duration-300 cursor-pointer`}
+      style={{ backgroundColor: `var(--color-${color.toLowerCase()}-800)` }}
+      className={`w-[100px] h-[100px] flex justify-center items-center text-white hover:shadow hover:-translate-y-2 transition-all duration-300 cursor-pointer`}
     >
       {color}
     </div>

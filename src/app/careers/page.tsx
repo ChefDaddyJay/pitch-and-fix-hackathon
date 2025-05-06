@@ -1,10 +1,12 @@
 "use client";
 
 import Hero from "@/ui/Hero";
-import { FormField, PageSection } from "@/ui/LayoutComponents";
+import { PageSection } from "@/ui/LayoutComponents";
+
 import { redirect } from "next/navigation";
 import { useDropzone } from "react-dropzone";
-import { SetStateAction, useCallback, useState } from "react";
+import { useCallback, useState } from "react";
+import { FormField, SubmitButton } from "@/ui/FormComponents";
 
 export default function CareersPage() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);

@@ -41,7 +41,7 @@ export function NavDropdown({
         />
       </DropdownButton>
 
-      <div className="md:invisible">
+      <div className="md:hidden">
         <DropdownContent>
           <div className="px-2 py-1 flex flex-wrap justify-between">
             <NavLinks links={links} />

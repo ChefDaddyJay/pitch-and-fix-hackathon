@@ -36,7 +36,9 @@ export async function fetchFilteredProducts(
     res = res.filter((product) => tags.includes(product.tag));
   }
   if (!isEmpty([query])) {
-    res = res.filter((product) => product.name.includes(query));
+    res = res.filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    );
   }
   res = res.filter((product) => product.price < price);
 
